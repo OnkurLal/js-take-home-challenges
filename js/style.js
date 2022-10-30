@@ -175,3 +175,7 @@
 // }else {
 //     console.log('DD')
 // }
+
+const color1 = prompt('What is your favorite color?').toLowerCase();
+const color2 = prompt('What is your second favorite color?').toLowerCase();
+color1 === 'blue' || 'grey' && color2 === 'grey' || 'blue'? console.log('You chose my favorite colors!'): console.log('Better luck next time!');
