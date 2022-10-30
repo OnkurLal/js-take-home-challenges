@@ -178,4 +178,28 @@
 
 const color1 = prompt('What is your favorite color?').toLowerCase();
 const color2 = prompt('What is your second favorite color?').toLowerCase();
-color1 === 'blue' || 'grey' && color2 === 'grey' || 'blue'? console.log('You chose my favorite colors!'): console.log('Better luck next time!');
+color1 === 'blue' && color2 === 'grey' ? 
+console.log('You chose my favorite colors!'):
+console.log('Better luck next time!');
+
+const birthday= new Date('November 10, 2022');
+const dayOfBirthday = birthday.getDay();
+switch(dayOfBirthday){
+    case 1: 
+        console.log('Your birthday is a Monday.');
+        break;
+    case 2: 
+        console.log('Your birthday is a Tuesday.');
+        break;
+    case 3: 
+        console.log('Your birthday is a Wednesday.');
+        break;
+    case 4: 
+        console.log('Your birthday is a Thursday.');
+        break;
+    case 5: 
+        console.log('Your birthday is a Friday.');
+        break;
+    default:
+        console.log('Your birthday fell on the weekend.')
+}
