@@ -206,23 +206,22 @@
 
 //Day 4 Take Home Challenge
 const passwordValidation = (password) => {
-    const length = password.length;
     const validLength = password.length >= 6 && password.length <= 20;
     const firstLetter = password[0];
     const validLetter = firstLetter.toLowerCase() !== firstLetter.toUpperCase();
     if (typeof password !== 'string'){
        return alert ('Password is not a valid string')
     }
-    if (validLength !== true && validLetter !== true){
+    if (!validLength && !validLetter){
        return alert('Password rejected, invalid password length and first charcter is not a letter')
     }
-    if (validLength !== true){
+    if (!validLength){
         return alert('Password rejected, invalid password length')
     }
-    if(validLetter !== true){
+    if(!validLetter){
         return alert('Password rejected, first charcter is not a letter')
     }
-    if( validLength && validLetter){
+    if(validLength && validLetter){
         return alert ('Password accepted')
     }
 }
