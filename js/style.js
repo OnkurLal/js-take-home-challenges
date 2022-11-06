@@ -270,13 +270,13 @@
 
 // }
 
-async function pokemon(){
+const getPokemonData = async (pokemon) => {
     try{
-        const getPokemon = await fetch('https://pokeapi.co/api/v2/pokemon/charizard');
+        const getPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
         const pokemonData = await getPokemon.json();
-        alert(pokemonData.name)
+        alert(`The name of the pokemon for this data set is ${pokemonData.name}.`)
     }catch (err){
-        alert('There was an error');
+        alert('There was an error or the pokemon name was mispelled.');
     }
 }
-pokemon()
+getPokemonData('mewtwo')
