@@ -275,8 +275,8 @@ const getPokemonData = async (pokemon) => {
         const getPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
         const pokemonData = await getPokemon.json();
         alert(`The name of the pokemon for this data set is ${pokemonData.name}.`)
-    }catch (err){
+    }catch {
         alert('There was an error or the pokemon name was mispelled.');
     }
 }
-getPokemonData('mewtwo')
+getPokemonData('mewtwo');
