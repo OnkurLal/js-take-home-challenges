@@ -205,53 +205,78 @@
 // }
 
 //Day 4 Take Home Challenge
-const passwordValidation = (password) => {
-    const validLength = password.length >= 6 && password.length <= 20;
-    const firstLetter = password[0];
-    const validLetter = firstLetter.toLowerCase() !== firstLetter.toUpperCase();
-    if (typeof password !== 'string'){
-       return alert ('Password is not a valid string')
-    }
-    if (!validLength && !validLetter){
-       return alert('Password rejected, invalid password length and first charcter is not a letter')
-    }
-    if (!validLength){
-        return alert('Password rejected, invalid password length')
-    }
-    if(!validLetter){
-        return alert('Password rejected, first charcter is not a letter')
-    }
-    if(validLength && validLetter){
-        return alert ('Password accepted')
+// const passwordValidation = (password) => {
+//     const validLength = password.length >= 6 && password.length <= 20;
+//     const firstLetter = password[0];
+//     const validLetter = firstLetter.toLowerCase() !== firstLetter.toUpperCase();
+//     if (typeof password !== 'string'){
+//        return alert ('Password is not a valid string')
+//     }
+//     if (!validLength && !validLetter){
+//        return alert('Password rejected, invalid password length and first charcter is not a letter')
+//     }
+//     if (!validLength){
+//         return alert('Password rejected, invalid password length')
+//     }
+//     if(!validLetter){
+//         return alert('Password rejected, first charcter is not a letter')
+//     }
+//     if(validLength && validLetter){
+//         return alert ('Password accepted')
+//     }
+// }
+
+// passwordValidation('9lae');
+// passwordValidation('glams9laedfadfadsfasdfasfda');
+// passwordValidation('9ladfasfe');
+// passwordValidation('dfadf9lae');
+
+
+// //Day 4 Bonus Problem
+// const basicMath = (operator, num1, num2) => {
+//     switch (operator){
+//         case '+':
+//             return num1 + num2;
+//             break;
+//         case '-':
+//             return num1 - num2;
+//             break;
+//         case '*':
+//             return num1 * num2;
+//             break;
+//         case '/':
+//             return num1 / num2;
+//             break;
+//         default:
+//             return 'Invalid operator'
+//     }
+// }
+// console.log(basicMath('+', 4, 7));
+// console.log(basicMath('-', 15, 18));
+// console.log(basicMath('*', 5, 5));
+// console.log(basicMath('/', 49, 7));
+
+// const uberStatus = (isHere)=>{
+// const ride = new Promise((resolve, reject)=>{
+//     if(isHere){
+//         resolve("Driver Arrived")
+//     }else{
+//         reject("Driver got lost")
+//     }
+// })
+// ride.then((value)).catch((error)=>{
+//     console.log(error)
+// })
+
+// }
+
+const getPokemonData = async (pokemon) => {
+    try{
+        const getPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+        const pokemonData = await getPokemon.json();
+        alert(`The name of the pokemon for this data set is ${pokemonData.name}.`)
+    }catch {
+        alert('There was an error or the pokemon name was mispelled.');
     }
 }
-
-passwordValidation('9lae');
-passwordValidation('glams9laedfadfadsfasdfasfda');
-passwordValidation('9ladfasfe');
-passwordValidation('dfadf9lae');
-
-
-//Day 4 Bonus Problem
-const basicMath = (operator, num1, num2) => {
-    switch (operator){
-        case '+':
-            return num1 + num2;
-            break;
-        case '-':
-            return num1 - num2;
-            break;
-        case '*':
-            return num1 * num2;
-            break;
-        case '/':
-            return num1 / num2;
-            break;
-        default:
-            return 'Invalid operator'
-    }
-}
-console.log(basicMath('+', 4, 7));
-console.log(basicMath('-', 15, 18));
-console.log(basicMath('*', 5, 5));
-console.log(basicMath('/', 49, 7));
+getPokemonData('mewtwo');
