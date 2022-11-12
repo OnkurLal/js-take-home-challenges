@@ -270,13 +270,124 @@
 
 // }
 
+
+
+// let array = new Array()
+// let array1 = ["Apples", "Banana", "Oranges", {name: "Mustafa"}]
+// // array1[2]="Tomato"
+// // array1[4]="Lettuce"
+// // array1[9]="Corn"
+// // array1[10]= "Mango"
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+//   ];
+// console.log(array1[3].name)
+// array1.push("New item")
+// array1.push("Cherry")
+// array1.pop()
+// array1.pop()
+// array1.shift()
+// array1.unshift("Fries")
+// array1.push("ketchup")
+// console.log(array1.includes("Tater Tots"))
+// const arr1 = [0,1,2]
+// const arr2 = [3,4,5]
+
+// const toApples = array1.map(item=>{
+//  return   array1[item] = "Apples"
+// })
+// console.log(toApples)
+
+
+
+// console.log(array1.some(item=> item=== "Apples"))
+// console.log(toApples.every(item=> item=== "Apples"))
+
+// console.log(arr1.concat(arr2))
+// console.log(array1.find(item=> item === "Apples"))
+
+// console.log( array1)
+
+// const toApples = array1.forEach(item=>{
+// console.log(item)
+//    })
+// console.log(array1.reverse(), array1.sort())
+//    console.log(toApples)
+
+// for (let index = 0; index < array1.length; index++) {
+
+//     // if(index === 3){
+//     //     console.log(element, element)
+//     // }
+//     const element = array1[index];
+//     console.log(element)
+    
+// }
+// for (const iterator of array1) {
+//     console.log(iterator + " Fries")
+// }
+// for (const key in array1) {
+// console.log(key)
+// }
+
+// let sandwich = {
+//     grilled: true,
+//     butter: "lots",
+//     bread: "whole wheat",
+//     calories: 250
+//   }
+//   for (const key in sandwich) {
+// console.log(key)
+//   }
+
+// FizzBuzz challenge
+// Write a function called fizzbuzz that will accept no arguments
+// The goal of this function is to print out all numbers from 1 to 100 but with three exceptions:
+// For every number that is divisible by 3 and 5, console log "FizzBuzz"
+// For every number that is divisible by only 3 and not 5, console log "Fizz"
+// For every number that is divisible by only 5 and not 3, console log "Buzz"
+
+
+
+// const fizzbuzz = () => {
+
+//     for (let index = 1; index <= 100; index++) {
+//         handlerFunction(index);
+// }
+// }
+
+// const handlerFunction = (index) => {
+//     if (index % 15 === 0) {
+//         console.log("FizzBuzz")
+//     }
+//     else if (index % 5 === 0){
+//          console.log("Buzz")
+//     }
+//     else if (index % 3 === 0){
+        
+//          console.log("Fizz")
+//     }
+//     else {
+//           console.log (index)
+//     }
+// }
+// fizzbuzz()
+
 const getPokemonData = async (pokemon) => {
     try{
-        const getPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-        const pokemonData = await getPokemon.json();
-        alert(`The name of the pokemon for this data set is ${pokemonData.name}.`)
+        const getPokemonResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+        const pokemonData = await getPokemonResponse.json();
+        const header = document.createElement("h1");
+        header.innerHTML = pokemonData.name;
+        document.getElementById('active-div').appendChild(header);
+        const image = document.createElement('img');
+        image.src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png';
+        image.alt = 'Picture of Mewtwo'
+        document.getElementById('active-div').appendChild(image)
     }catch {
         alert('There was an error or the pokemon name was mispelled.');
     }
 }
-getPokemonData('mewtwo');
+document.getElementById('myButton').addEventListener('click', () => getPokemonData('mewtwo'));
