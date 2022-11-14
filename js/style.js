@@ -375,19 +375,89 @@
 // }
 // fizzbuzz()
 
-const getPokemonData = async (pokemon) => {
-    try{
-        const getPokemonResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-        const pokemonData = await getPokemonResponse.json();
-        const header = document.createElement("h1");
-        header.innerHTML = pokemonData.name;
-        document.getElementById('active-div').appendChild(header);
-        const image = document.createElement('img');
-        image.src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png';
-        image.alt = 'Picture of Mewtwo'
-        document.getElementById('active-div').appendChild(image)
-    }catch {
-        alert('There was an error or the pokemon name was mispelled.');
+// const getPokemonData = async (pokemon) => {
+//     try{
+//         const getPokemonResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+//         const pokemonData = await getPokemonResponse.json();
+//         const header = document.createElement("h1");
+//         header.innerHTML = pokemonData.name;
+//         document.getElementById('active-div').appendChild(header);
+//         const image = document.createElement('img');
+//         image.src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png';
+//         image.alt = 'Picture of Mewtwo'
+//         document.getElementById('active-div').appendChild(image)
+//     }catch {
+//         alert('There was an error or the pokemon name was mispelled.');
+//     }
+// }
+// document.getElementById('myButton').addEventListener('click', () => getPokemonData('mewtwo'));
+
+// Challenge 1
+// Create a new object called Donis Kia
+// Donis Kia should store key value pairs of things the car could have
+// One of the keys stored should be a playlist that contains a list of Donis favorite songs
+
+const donisKia = {
+    color:'blue',
+    wheels: 4,
+    miles: 30000,
+    playlist: ['song1', 'song2', 'song3'] 
+};
+
+// Challenge 2
+// Congrats, you got a new dog!
+// Create an class named "dog"
+// Name and describe your dog
+// Add a property to your dog object called "name" and assign a name
+// Add two more properties to describe your dog. (ex: How many legs, fur color, etc)
+// Let's teach it some tricks
+// Give your dog a property called “speak” and assign a function that will alert “woof!”
+// Add another method to teach your dog one more trick
+// BONUS: Display your dog object values in HTML
+
+class NewDog {
+constructor(name, legs, furColor,){
+    this.name = name;
+    this.legs = legs;
+    this.furColor = furColor;
+}
+speak(){
+    console.log('Woof!');
+}
+roll(){
+    console.log('Dog rolled over');
+}
+}
+
+const onkursDog = new NewDog ('Spot', 4, 'black');
+onkursDog.roll()
+for (key in onkursDog){
+    console.log(onkursDog[key]);
+}
+
+class Car{
+    constructor (make, model, year, color){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
     }
 }
-document.getElementById('myButton').addEventListener('click', () => getPokemonData('mewtwo'));
+
+const car1 = new Car('Toyota', 'Camry', 2014, 'Blue');
+const car2 = new Car('Honda', 'Civic', 2006, 'Red');
+const car3 = new Car('Nissan', 'Altima', 2019, 'Silver');
+const car4 = new Car('Ford', 'Explorer', 2021, 'Black');
+console.log('car1:', car1, 'car2:', car2, 'car3:', car3, 'car4: ', car4,);
+const para1 = document.createElement('p');
+para1.innerHTML = JSON.stringify(car1);
+const para2 = document.createElement('p')
+para2.innerHTML = JSON.stringify(car2);
+const para3 = document.createElement('p')
+para3.innerHTML = JSON.stringify(car3);
+const para4 = document.createElement('p')
+para4.innerHTML = JSON.stringify(car4);
+document.getElementById('active-div').appendChild(para1);
+document.getElementById('active-div').appendChild(para2);
+document.getElementById('active-div').appendChild(para3);
+document.getElementById('active-div').appendChild(para4);
