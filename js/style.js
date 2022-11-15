@@ -270,13 +270,194 @@
 
 // }
 
-const getPokemonData = async (pokemon) => {
-    try{
-        const getPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-        const pokemonData = await getPokemon.json();
-        alert(`The name of the pokemon for this data set is ${pokemonData.name}.`)
-    }catch {
-        alert('There was an error or the pokemon name was mispelled.');
+
+
+// let array = new Array()
+// let array1 = ["Apples", "Banana", "Oranges", {name: "Mustafa"}]
+// // array1[2]="Tomato"
+// // array1[4]="Lettuce"
+// // array1[9]="Corn"
+// // array1[10]= "Mango"
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+//   ];
+// console.log(array1[3].name)
+// array1.push("New item")
+// array1.push("Cherry")
+// array1.pop()
+// array1.pop()
+// array1.shift()
+// array1.unshift("Fries")
+// array1.push("ketchup")
+// console.log(array1.includes("Tater Tots"))
+// const arr1 = [0,1,2]
+// const arr2 = [3,4,5]
+
+// const toApples = array1.map(item=>{
+//  return   array1[item] = "Apples"
+// })
+// console.log(toApples)
+
+
+
+// console.log(array1.some(item=> item=== "Apples"))
+// console.log(toApples.every(item=> item=== "Apples"))
+
+// console.log(arr1.concat(arr2))
+// console.log(array1.find(item=> item === "Apples"))
+
+// console.log( array1)
+
+// const toApples = array1.forEach(item=>{
+// console.log(item)
+//    })
+// console.log(array1.reverse(), array1.sort())
+//    console.log(toApples)
+
+// for (let index = 0; index < array1.length; index++) {
+
+//     // if(index === 3){
+//     //     console.log(element, element)
+//     // }
+//     const element = array1[index];
+//     console.log(element)
+    
+// }
+// for (const iterator of array1) {
+//     console.log(iterator + " Fries")
+// }
+// for (const key in array1) {
+// console.log(key)
+// }
+
+// let sandwich = {
+//     grilled: true,
+//     butter: "lots",
+//     bread: "whole wheat",
+//     calories: 250
+//   }
+//   for (const key in sandwich) {
+// console.log(key)
+//   }
+
+// FizzBuzz challenge
+// Write a function called fizzbuzz that will accept no arguments
+// The goal of this function is to print out all numbers from 1 to 100 but with three exceptions:
+// For every number that is divisible by 3 and 5, console log "FizzBuzz"
+// For every number that is divisible by only 3 and not 5, console log "Fizz"
+// For every number that is divisible by only 5 and not 3, console log "Buzz"
+
+
+
+// const fizzbuzz = () => {
+
+//     for (let index = 1; index <= 100; index++) {
+//         handlerFunction(index);
+// }
+// }
+
+// const handlerFunction = (index) => {
+//     if (index % 15 === 0) {
+//         console.log("FizzBuzz")
+//     }
+//     else if (index % 5 === 0){
+//          console.log("Buzz")
+//     }
+//     else if (index % 3 === 0){
+        
+//          console.log("Fizz")
+//     }
+//     else {
+//           console.log (index)
+//     }
+// }
+// fizzbuzz()
+
+// const getPokemonData = async (pokemon) => {
+//     try{
+//         const getPokemonResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+//         const pokemonData = await getPokemonResponse.json();
+//         const header = document.createElement("h1");
+//         header.innerHTML = pokemonData.name;
+//         document.getElementById('active-div').appendChild(header);
+//         const image = document.createElement('img');
+//         image.src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png';
+//         image.alt = 'Picture of Mewtwo'
+//         document.getElementById('active-div').appendChild(image)
+//     }catch {
+//         alert('There was an error or the pokemon name was mispelled.');
+//     }
+// }
+// document.getElementById('myButton').addEventListener('click', () => getPokemonData('mewtwo'));
+
+// Challenge 1
+// Create a new object called Donis Kia
+// Donis Kia should store key value pairs of things the car could have
+// One of the keys stored should be a playlist that contains a list of Donis favorite songs
+
+const donisKia = {
+    color:'blue',
+    wheels: 4,
+    miles: 30000,
+    playlist: ['song1', 'song2', 'song3'] 
+};
+
+// Challenge 2
+// Congrats, you got a new dog!
+// Create an class named "dog"
+// Name and describe your dog
+// Add a property to your dog object called "name" and assign a name
+// Add two more properties to describe your dog. (ex: How many legs, fur color, etc)
+// Let's teach it some tricks
+// Give your dog a property called “speak” and assign a function that will alert “woof!”
+// Add another method to teach your dog one more trick
+// BONUS: Display your dog object values in HTML
+
+class NewDog {
+constructor(name, legs, furColor,){
+    this.name = name;
+    this.legs = legs;
+    this.furColor = furColor;
+}
+speak(){
+    console.log('Woof!');
+}
+roll(){
+    console.log('Dog rolled over');
+}
+}
+
+const onkursDog = new NewDog ('Spot', 4, 'black');
+onkursDog.roll()
+for (key in onkursDog){
+    console.log(onkursDog[key]);
+}
+
+class Car{
+    constructor (make, model, year, color){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
     }
 }
-getPokemonData('mewtwo');
+
+const car1 = new Car('Toyota', 'Camry', 2014, 'Blue');
+const car2 = new Car('Honda', 'Civic', 2006, 'Red');
+const car3 = new Car('Nissan', 'Altima', 2019, 'Silver');
+const car4 = new Car('Ford', 'Explorer', 2021, 'Black');
+console.log('car1:', car1, 'car2:', car2, 'car3:', car3, 'car4: ', car4,);
+const para1 = document.createElement('p');
+para1.innerHTML = JSON.stringify(car1);
+const para2 = document.createElement('p')
+para2.innerHTML = JSON.stringify(car2);
+const para3 = document.createElement('p')
+para3.innerHTML = JSON.stringify(car3);
+const para4 = document.createElement('p')
+para4.innerHTML = JSON.stringify(car4);
+document.getElementById('active-div').appendChild(para1);
+document.getElementById('active-div').appendChild(para2);
+document.getElementById('active-div').appendChild(para3);
+document.getElementById('active-div').appendChild(para4);
