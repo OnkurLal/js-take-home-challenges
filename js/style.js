@@ -397,67 +397,136 @@
 // Donis Kia should store key value pairs of things the car could have
 // One of the keys stored should be a playlist that contains a list of Donis favorite songs
 
-const donisKia = {
-    color:'blue',
-    wheels: 4,
-    miles: 30000,
-    playlist: ['song1', 'song2', 'song3'] 
-};
+// const donisKia = {
+//     color:'blue',
+//     wheels: 4,
+//     miles: 30000,
+//     playlist: ['song1', 'song2', 'song3'] 
+// };
 
-// Challenge 2
-// Congrats, you got a new dog!
-// Create an class named "dog"
-// Name and describe your dog
-// Add a property to your dog object called "name" and assign a name
-// Add two more properties to describe your dog. (ex: How many legs, fur color, etc)
-// Let's teach it some tricks
-// Give your dog a property called “speak” and assign a function that will alert “woof!”
-// Add another method to teach your dog one more trick
-// BONUS: Display your dog object values in HTML
+// // Challenge 2
+// // Congrats, you got a new dog!
+// // Create an class named "dog"
+// // Name and describe your dog
+// // Add a property to your dog object called "name" and assign a name
+// // Add two more properties to describe your dog. (ex: How many legs, fur color, etc)
+// // Let's teach it some tricks
+// // Give your dog a property called “speak” and assign a function that will alert “woof!”
+// // Add another method to teach your dog one more trick
+// // BONUS: Display your dog object values in HTML
 
-class NewDog {
-constructor(name, legs, furColor,){
-    this.name = name;
-    this.legs = legs;
-    this.furColor = furColor;
-}
-speak(){
-    console.log('Woof!');
-}
-roll(){
-    console.log('Dog rolled over');
-}
-}
+// class NewDog {
+// constructor(name, legs, furColor,){
+//     this.name = name;
+//     this.legs = legs;
+//     this.furColor = furColor;
+// }
+// speak(){
+//     console.log('Woof!');
+// }
+// roll(){
+//     console.log('Dog rolled over');
+// }
+// }
 
-const onkursDog = new NewDog ('Spot', 4, 'black');
-onkursDog.roll()
-for (key in onkursDog){
-    console.log(onkursDog[key]);
-}
+// const onkursDog = new NewDog ('Spot', 4, 'black');
+// onkursDog.roll()
+// for (key in onkursDog){
+//     console.log(onkursDog[key]);
+// }
 
-class Car{
-    constructor (make, model, year, color){
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.color = color;
+// class Car{
+//     constructor (make, model, year, color){
+//         this.make = make;
+//         this.model = model;
+//         this.year = year;
+//         this.color = color;
+//     }
+// }
+
+// const car1 = new Car('Toyota', 'Camry', 2014, 'Blue');
+// const car2 = new Car('Honda', 'Civic', 2006, 'Red');
+// const car3 = new Car('Nissan', 'Altima', 2019, 'Silver');
+// const car4 = new Car('Ford', 'Explorer', 2021, 'Black');
+// console.log('car1:', car1, 'car2:', car2, 'car3:', car3, 'car4: ', car4,);
+// const para1 = document.createElement('p');
+// para1.innerHTML = JSON.stringify(car1);
+// const para2 = document.createElement('p')
+// para2.innerHTML = JSON.stringify(car2);
+// const para3 = document.createElement('p')
+// para3.innerHTML = JSON.stringify(car3);
+// const para4 = document.createElement('p')
+// para4.innerHTML = JSON.stringify(car4);
+// document.getElementById('active-div').appendChild(para1);
+// document.getElementById('active-div').appendChild(para2);
+// document.getElementById('active-div').appendChild(para3);
+// document.getElementById('active-div').appendChild(para4);
+
+// Array Challenges
+
+// Write a JS function to check whether in input is in an array or not
+const isInArray = (input, arr) => arr.includes(input);
+console.log(isInArray(3, [1,2,4,5,3]));
+
+// Write a JS function to clone an array
+const cloneArray = (arr) => arr.slice(0);
+console.log(cloneArray(['hello', 'world', 4, 'bye']));
+
+// Write a simple JavaScript program to join all elements of the following array into a string.
+const myColor = ["Red", "Green", "White", "Black"];
+const arrayToString = (arr) => arr.join(' ');
+console.log(arrayToString(myColor));
+
+// Write a JS function to sort the items of an array. Sample Output : -4,-3,1,2,3,5,6,7,8.
+const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+const sortArray = (array) => array.sort();
+console.log(sortArray(arr));
+
+// Write a JS function to compute the sum and product of an array of integers. */
+const sumAndProduct = (arr) => {
+    let sum = 0;
+    let product = 1;
+    for (let index = 0; index < arr.length; index++) {
+        sum += arr[index];
+        product *= arr[index];
     }
+    return `The sum of the array is ${sum} and the product of the array is ${product}`;
 }
+console.log(sumAndProduct([1, 2, 3, 4, 5, 6,]))
 
-const car1 = new Car('Toyota', 'Camry', 2014, 'Blue');
-const car2 = new Car('Honda', 'Civic', 2006, 'Red');
-const car3 = new Car('Nissan', 'Altima', 2019, 'Silver');
-const car4 = new Car('Ford', 'Explorer', 2021, 'Black');
-console.log('car1:', car1, 'car2:', car2, 'car3:', car3, 'car4: ', car4,);
-const para1 = document.createElement('p');
-para1.innerHTML = JSON.stringify(car1);
-const para2 = document.createElement('p')
-para2.innerHTML = JSON.stringify(car2);
-const para3 = document.createElement('p')
-para3.innerHTML = JSON.stringify(car3);
-const para4 = document.createElement('p')
-para4.innerHTML = JSON.stringify(car4);
-document.getElementById('active-div').appendChild(para1);
-document.getElementById('active-div').appendChild(para2);
-document.getElementById('active-div').appendChild(para3);
-document.getElementById('active-div').appendChild(para4);
+// Object Exercises
+
+// Create an object with 3 key value pairs. Then delete one of the items from the object. Console log before and after deleting
+const favorites = {
+    color: 'Blue',
+    dessert: 'Choclate',
+    fruit: 'Pineapple'
+}
+console.log(favorites);
+delete favorites.color;
+console.log(favorites);
+
+// Write a function that will log the reading status of each book from the array of objects. Here is the array
+let library = [  { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true }, { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true }, { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }]
+
+const readingStatus= (bookList) => {
+    let currentReadingList = [];
+    for(let index = 0; index < bookList.length; index++){
+        let book = bookList[index];
+        if(book.readingStatus){
+            currentReadingList.push(book.title);
+        }
+    }
+    return `The current books that are being read are ${currentReadingList.join(', ')}.`
+}
+console.log(readingStatus(library));
+
+// Create a function that multiplies every value by two const myObject = { 'a': 1, 'b': 2, 'c': 3 }; should turn into const myObject = { 'a': 2, 'b': 4, 'c': 36};
+myObject = { 'a': 1, 'b': 2, 'c': 3 };
+const multiplyByTwo = (object) => {
+    for (const key in object) {
+        object[key] = object[key] * 2;
+    }
+    return object;
+}
+console.log(multiplyByTwo(myObject));
