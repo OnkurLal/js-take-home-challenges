@@ -32,7 +32,7 @@
 // //     message = `${num1} and ${num2} are equal.`
 // // }else {
 // //     message = `${lesser} is the lower value of ${num1} and ${num2}.`
-// // } 
+// // }
 // // // alert(message);
 
 // // // console.log('currentDate :>> ', getCurrentDay);
@@ -119,7 +119,7 @@
 // switch (Name) {
 //     case 'Doni':
 //         alert('doni is in list')
-        
+
 //         break;
 //          case 'victor':
 //         alert('victor is in list')
@@ -131,7 +131,6 @@
 //         alert('sorry but not in list')
 //         break;
 // }
-
 
 // Challenge Two
 // Create a prompt asking for their age
@@ -178,26 +177,26 @@
 
 // const color1 = prompt('What is your favorite color?').toLowerCase();
 // const color2 = prompt('What is your second favorite color?').toLowerCase();
-// color1 === 'blue' && color2 === 'grey' ? 
+// color1 === 'blue' && color2 === 'grey' ?
 // console.log('You chose my favorite colors!'):
 // console.log('Better luck next time!');
 
 // const birthday= new Date('November 10, 2022');
 // const dayOfBirthday = birthday.getDay();
 // switch(dayOfBirthday){
-//     case 1: 
+//     case 1:
 //         console.log('Your birthday is a Monday.');
 //         break;
-//     case 2: 
+//     case 2:
 //         console.log('Your birthday is a Tuesday.');
 //         break;
-//     case 3: 
+//     case 3:
 //         console.log('Your birthday is a Wednesday.');
 //         break;
-//     case 4: 
+//     case 4:
 //         console.log('Your birthday is a Thursday.');
 //         break;
-//     case 5: 
+//     case 5:
 //         console.log('Your birthday is a Friday.');
 //         break;
 //     default:
@@ -230,7 +229,6 @@
 // passwordValidation('glams9laedfadfadsfasdfasfda');
 // passwordValidation('9ladfasfe');
 // passwordValidation('dfadf9lae');
-
 
 // //Day 4 Bonus Problem
 // const basicMath = (operator, num1, num2) => {
@@ -270,8 +268,6 @@
 
 // }
 
-
-
 // let array = new Array()
 // let array1 = ["Apples", "Banana", "Oranges", {name: "Mustafa"}]
 // // array1[2]="Tomato"
@@ -300,8 +296,6 @@
 // })
 // console.log(toApples)
 
-
-
 // console.log(array1.some(item=> item=== "Apples"))
 // console.log(toApples.every(item=> item=== "Apples"))
 
@@ -323,7 +317,7 @@
 //     // }
 //     const element = array1[index];
 //     console.log(element)
-    
+
 // }
 // for (const iterator of array1) {
 //     console.log(iterator + " Fries")
@@ -349,8 +343,6 @@
 // For every number that is divisible by only 3 and not 5, console log "Fizz"
 // For every number that is divisible by only 5 and not 3, console log "Buzz"
 
-
-
 // const fizzbuzz = () => {
 
 //     for (let index = 1; index <= 100; index++) {
@@ -366,7 +358,7 @@
 //          console.log("Buzz")
 //     }
 //     else if (index % 3 === 0){
-        
+
 //          console.log("Fizz")
 //     }
 //     else {
@@ -401,7 +393,7 @@
 //     color:'blue',
 //     wheels: 4,
 //     miles: 30000,
-//     playlist: ['song1', 'song2', 'song3'] 
+//     playlist: ['song1', 'song2', 'song3']
 // };
 
 // // Challenge 2
@@ -465,68 +457,125 @@
 // Array Challenges
 
 // Write a JS function to check whether in input is in an array or not
-const isInArray = (input, arr) => arr.includes(input);
-console.log(isInArray(3, [1,2,4,5,3]));
+// const isInArray = (input, arr) => arr.includes(input);
+// console.log(isInArray(3, [1,2,4,5,3]));
 
-// Write a JS function to clone an array
-const cloneArray = (arr) => arr.slice(0);
-console.log(cloneArray(['hello', 'world', 4, 'bye']));
+// // Write a JS function to clone an array
+// const cloneArray = (arr) => arr.slice(0);
+// console.log(cloneArray(['hello', 'world', 4, 'bye']));
 
-// Write a simple JavaScript program to join all elements of the following array into a string.
-const myColor = ["Red", "Green", "White", "Black"];
-const arrayToString = (arr) => arr.join(' ');
-console.log(arrayToString(myColor));
+// // Write a simple JavaScript program to join all elements of the following array into a string.
+// const myColor = ["Red", "Green", "White", "Black"];
+// const arrayToString = (arr) => arr.join(' ');
+// console.log(arrayToString(myColor));
 
-// Write a JS function to sort the items of an array. Sample Output : -4,-3,1,2,3,5,6,7,8.
-const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
-const sortArray = (array) => array.sort();
-console.log(sortArray(arr));
+// // Write a JS function to sort the items of an array. Sample Output : -4,-3,1,2,3,5,6,7,8.
+// const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+// const sortArray = (array) => array.sort();
+// console.log(sortArray(arr));
 
-// Write a JS function to compute the sum and product of an array of integers. */
-const sumAndProduct = (arr) => {
-    let sum = 0;
-    let product = 1;
-    for (let index = 0; index < arr.length; index++) {
-        sum += arr[index];
-        product *= arr[index];
-    }
-    return `The sum of the array is ${sum} and the product of the array is ${product}`;
-}
-console.log(sumAndProduct([1, 2, 3, 4, 5, 6,]))
+// // Write a JS function to compute the sum and product of an array of integers. */
+// const sumAndProduct = (arr) => {
+//     let sum = 0;
+//     let product = 1;
+//     for (let index = 0; index < arr.length; index++) {
+//         sum += arr[index];
+//         product *= arr[index];
+//     }
+//     return `The sum of the array is ${sum} and the product of the array is ${product}`;
+// }
+// console.log(sumAndProduct([1, 2, 3, 4, 5, 6,]))
 
-// Object Exercises
+// // Object Exercises
 
-// Create an object with 3 key value pairs. Then delete one of the items from the object. Console log before and after deleting
-const favorites = {
-    color: 'Blue',
-    dessert: 'Choclate',
-    fruit: 'Pineapple'
-}
-console.log(favorites);
-delete favorites.color;
-console.log(favorites);
+// // Create an object with 3 key value pairs. Then delete one of the items from the object. Console log before and after deleting
+// const favorites = {
+//     color: 'Blue',
+//     dessert: 'Choclate',
+//     fruit: 'Pineapple'
+// }
+// console.log(favorites);
+// delete favorites.color;
+// console.log(favorites);
 
-// Write a function that will log the reading status of each book from the array of objects. Here is the array
-let library = [  { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true }, { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true }, { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }]
+// // Write a function that will log the reading status of each book from the array of objects. Here is the array
+// let library = [  { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true }, { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true }, { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }]
 
-const readingStatus= (bookList) => {
-    let currentReadingList = [];
-    for(let index = 0; index < bookList.length; index++){
-        let book = bookList[index];
-        if(book.readingStatus){
-            currentReadingList.push(book.title);
-        }
-    }
-    return `The current books that are being read are ${currentReadingList.join(', ')}.`
-}
-console.log(readingStatus(library));
+// const readingStatus= (bookList) => {
+//     let currentReadingList = [];
+//     for(let index = 0; index < bookList.length; index++){
+//         let book = bookList[index];
+//         if(book.readingStatus){
+//             currentReadingList.push(book.title);
+//         }
+//     }
+//     return `The current books that are being read are ${currentReadingList.join(', ')}.`
+// }
+// console.log(readingStatus(library));
 
-// Create a function that multiplies every value by two const myObject = { 'a': 1, 'b': 2, 'c': 3 }; should turn into const myObject = { 'a': 2, 'b': 4, 'c': 36};
-myObject = { 'a': 1, 'b': 2, 'c': 3 };
-const multiplyByTwo = (object) => {
-    for (const key in object) {
-        object[key] = object[key] * 2;
-    }
-    return object;
-}
-console.log(multiplyByTwo(myObject));
+// // Create a function that multiplies every value by two const myObject = { 'a': 1, 'b': 2, 'c': 3 }; should turn into const myObject = { 'a': 2, 'b': 4, 'c': 36};
+// myObject = { 'a': 1, 'b': 2, 'c': 3 };
+// const multiplyByTwo = (object) => {
+//     for (const key in object) {
+//         object[key] = object[key] * 2;
+//     }
+//     return object;
+// }
+// console.log(multiplyByTwo(myObject));
+
+// localStorage.setItem("name", "Mustafa")
+// localStorage.setItem("height", "5'3")
+// console.log(localStorage.getItem("name"))
+// localStorage.removeItem("name")
+// localStorage.setItem("favoriteColorsTest", JSON.stringify(["Blue", "Red", "Green", "Yellow"]))
+// const arr = localStorage.getItem("favoriteColorsTest")
+
+// const parsedArray  = JSON.parse(arr)
+// console.log(parsedArray)
+
+// sessionStorage.name = "Onkur"
+
+// document.cookie = "name=Victor"
+// alert(document.cookie)
+
+// function sayHi(phrase, who) {
+//     alert( phrase + ', ' + who );
+//   }
+
+//   setTimeout(sayHi, 10000, "Hello", "John");
+
+// repeat with the interval of 2 seconds
+
+// let timerId = setInterval(() => alert('tick'), 2000);
+// console.time();
+// for (let i = 0; i <1000;i++) {
+// //     console.log(i);
+// }
+// console.time()
+// // after 5 seconds stop
+// setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
+// console.timeEnd()
+
+const name = document.getElementById("name");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirmPassword");
+const form = document.getElementById("form");
+const errorMessage = document.getElementById("error");
+
+form.addEventListener("submit", (e) => {
+  let message = [];
+  //   if (name.value === "" || name.value == null) {
+  //     message.push("Please enter your name");
+  //   }
+  if (password.value.length <= 6) {
+    console.log("Less than 6 characters");
+    message.push("Please enter a password longer than 6 characters");
+  }
+  if (password.value.length >= 20) {
+    message.push("Please enter a password shorter than 20 characters");
+  }
+  if (messages.length > 0) {
+    e.preventDefault();
+    errorMessage.innerText = messages.join(", ");
+  }
+});
